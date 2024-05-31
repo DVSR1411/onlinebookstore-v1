@@ -13,7 +13,7 @@ public class catalog extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "Sathwik123");
             Statement stmt = con.createStatement();
-            String sqlStmt = "SELECT title, author, version, publisher, cost FROM books WHERE title = '" + title + "'";
+            String sqlStmt = "SELECT * FROM books WHERE title = '" + title + "'";
             ResultSet rs = stmt.executeQuery(sqlStmt);
             int flag = 0;
             while (rs.next()) {

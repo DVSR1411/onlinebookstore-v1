@@ -18,7 +18,7 @@ public class reg extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "Sathwik123");
             Statement stmt = con.createStatement();
-            String sqlStmt = "SELECT id,password FROM login";
+            String sqlStmt = "SELECT id, pwd FROM login";
             ResultSet rs = stmt.executeQuery(sqlStmt);
             int flag = 0;
             while (rs.next()) {

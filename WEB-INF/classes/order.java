@@ -19,7 +19,7 @@ public class order extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "Sathwik123");
             Statement stmt = con.createStatement();
-            String sqlstmt = "SELECT id,password FROM login";
+            String sqlstmt = "SELECT id,pwd FROM login";
             ResultSet rs = stmt.executeQuery(sqlstmt);
             int flag = 0;
             while (rs.next()) {
