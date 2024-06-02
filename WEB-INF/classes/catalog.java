@@ -22,7 +22,7 @@ public class catalog extends HttpServlet {
                 pw.println("AUTHOR: " + rs.getString(2) + "<br>");
                 pw.println("VERSION: " + rs.getString(3) + "<br>");
                 pw.println("PUBLISHER: " + rs.getString(4) + "<br>");
-                pw.println("COST: " + rs.getString(5) + "<br>");
+                pw.println("COST: " + rs.getInt(5) + "<br>");
                 pw.println("</div>");
                 flag = 1;
             }

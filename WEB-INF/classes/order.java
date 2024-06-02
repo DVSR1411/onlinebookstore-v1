@@ -32,7 +32,7 @@ public class order extends HttpServlet {
                 pw.println("<a href=\"order.html\">Press HERE to RETRY</a>");
             } else {
                 Statement stmt2 = con.createStatement();
-                String s = "SELECT cost FROM book WHERE title='" + title + "'";
+                String s = "SELECT cost FROM books WHERE title='" + title + "'";
                 ResultSet rs1 = stmt2.executeQuery(s);
                 int flag1 = 0;
                 while (rs1.next()) {

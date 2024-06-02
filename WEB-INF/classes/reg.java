@@ -13,7 +13,6 @@ public class reg extends HttpServlet {
         String phno = req.getParameter("phno");
         String id = req.getParameter("id");
         String pwd = req.getParameter("pwd");
-        int no = Integer.parseInt(phno);
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "Sathwik123");
@@ -31,7 +30,7 @@ public class reg extends HttpServlet {
                 pw.println("<a href=\"reg.html\">Click here to retry registration</a>");
             } else {
                 Statement stmt1 = con.createStatement();
-                stmt1.executeUpdate("INSERT INTO login VALUES('" + name + "','" + addr + "'," + no + ",'" + id + "','" + pwd + "')");
+                stmt1.executeUpdate("INSERT INTO login VALUES('" + name + "','" + addr + "','" + phno + "','" + id + "','" + pwd + "')");
                 pw.println("Your details are entered successfully.<br><br>");
                 pw.println("<a href=\"login.html\">Click here to login</a>");
             }
